@@ -11,7 +11,7 @@ const Header = () => {
     <div className="w-screen h-[100px] z-10 bg-zinc-50 fixed drop-shadow-lg">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
-          <div className="logo w-200 h-150">
+          <div className="logo w-150 h-55">
             <img src={logo} alt="logo" />
           </div>
           <ul className="hidden md:flex justify-between">
@@ -22,10 +22,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="hidden md:flex pr-4">
-          <button class=" text-black  hover:text-darkseagreen py-2 px-4">
+          <button className=" text-black  hover:text-darkseagreen py-2 px-4">
             Login
           </button>
-          <button class="bg-seagreen hover:bg-darkseagreen border-seagreen text-black py-3 px-8 rounded-full">
+          <button className="bg-seagreen hover:bg-darkseagreen border-seagreen text-black py-3 px-8 rounded-full">
             SignUp
           </button>
         </div>
@@ -45,10 +45,10 @@ const Header = () => {
         <li className="w-full">Cart</li>
 
         <div className="flex flex-col my-4">
-          <button class=" border-2 border-seagreen rounded-full text-black bg-transparent hover:text-darkseagreen py-2 px-4 mb-4">
+          <button className=" border-2 border-seagreen rounded-full text-black bg-transparent hover:text-darkseagreen py-2 px-4 mb-4">
             Login
           </button>
-          <button class="bg-seagreen  hover:bg-darkseagreen border-seagreen text-black py-3 px-8 rounded-full">
+          <button className="bg-seagreen  hover:bg-darkseagreen border-seagreen text-black py-3 px-8 rounded-full">
             SignUp
           </button>
         </div>
