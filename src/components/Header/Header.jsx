@@ -8,7 +8,7 @@ const Header = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="w-screen h-[100px] z-10 bg-zinc-50 fixed drop-shadow-lg">
+    <div className="w-full h-[100px] z-10 bg-zinc-50 fixed drop-shadow-lg">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
           <div className="logo w-150 h-55">

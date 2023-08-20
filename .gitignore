@@ -16,6 +16,7 @@ node_modules
 # Ignore Parcel config files
 .parcel-cache
 
+dist
 
 //received fatal error
 git remote remove origin
