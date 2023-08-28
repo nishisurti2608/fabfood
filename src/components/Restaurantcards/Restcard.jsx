@@ -2,13 +2,7 @@ import React from "react";
 
 import { CDN_URL } from "../../data/constants";
 
-const Restcard = ({
-  name,
-  cuisines,
-  cloudinaryImageId,
-  avgRating,
-  lastMileTravelString,
-}) => {
+const Restcard = ({ name, cuisines, cloudinaryImageId, avgRating }) => {
   return (
     <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
       <div className="w-full max-w-md  mx-auto  bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -28,9 +22,8 @@ const Restcard = ({
               </p>
             </div>
             <p className="text-[#7C7C80] font-[15px] resize-none">
-              {cuisines.join(", ")}
+              {cuisines.join(",")}
             </p>
-            {lastMileTravelString}
           </div>
         </div>
       </div>
