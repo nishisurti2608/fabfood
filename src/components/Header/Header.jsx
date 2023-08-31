@@ -6,6 +6,7 @@ import { GiKnifeFork } from "react-icons/gi";
 const Header = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+  const [btnName, setbtnName] = useState("Login");
 
   return (
     <div className="w-full h-[100px] z-10 bg-zinc-50 fixed drop-shadow-lg">
@@ -45,8 +46,14 @@ const Header = () => {
         <li className="w-full">Cart</li>
 
         <div className="flex flex-col my-4">
-          <button className=" border-2 border-seagreen rounded-full text-black bg-transparent hover:text-darkseagreen py-2 px-4 mb-4">
-            Login
+          <button
+            className=" border-2 border-seagreen rounded-full text-black bg-transparent hover:text-darkseagreen py-2 px-4 mb-4"
+            onClick={() => {
+              btnName === "Login" ? setbtnName("Logout") : setbtnName("Login");
+              console.log(btnName);
+            }}
+          >
+            {btnName}
           </button>
           <button className="bg-seagreen  hover:bg-darkseagreen border-seagreen text-black py-3 px-8 rounded-full">
             SignUp

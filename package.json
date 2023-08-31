@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
+    "start:css": "tailwindcss -o src/tailwind.css --watch",
     "build": "parcel build index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
