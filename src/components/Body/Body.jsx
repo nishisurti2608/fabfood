@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import Restcard from "../Restaurantcards/Restcard";
 import Shimmer from "../../Shimmer/Shimmer";
@@ -116,7 +117,14 @@ const Body = () => {
 
       <div className="res-container pt-[120px] px-10 flex flex-wrap">
         {filteredRestro?.map((restaurant) => {
-          return <Restcard {...restaurant?.info} key={restaurant?.info?.id} />;
+          return (
+            <Link
+              key={restaurant?.info?.id}
+              to={"/restaurants/" + restaurant?.info?.id}
+            >
+              <Restcard {...restaurant?.info} />
+            </Link>
+          );
         })}
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../../../assets/images/logo.png";
 import { CgMenuHotdog } from "react-icons/cg";
 import { GiKnifeFork } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -16,9 +17,15 @@ const Header = () => {
             <img src={logo} alt="logo" />
           </div>
           <ul className="hidden md:flex justify-between">
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Support</Link>
+            </li>
             <li>Cart</li>
           </ul>
         </div>
@@ -40,9 +47,15 @@ const Header = () => {
       </div>
 
       <ul className={!nav ? "hidden" : "absolute w-full   bg-zinc-50 px-8 "}>
-        <li className="border-b-2 border-zinc-300 w-full">Home</li>
-        <li className="border-b-2 border-zinc-300 w-full">About</li>
-        <li className="border-b-2 border-zinc-300 w-full">Support</li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link to="/about">About</Link>
+        </li>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link to="/contact">Support</Link>
+        </li>
         <li className="w-full">Cart</li>
 
         <div className="flex flex-col my-4">
