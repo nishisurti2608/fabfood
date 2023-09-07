@@ -115,16 +115,15 @@ const Body = () => {
         </div>
       </div>
 
-      <div className="res-container pt-[120px] px-10 flex flex-wrap">
+      <div className="res-container pt-[120px] px-10 flex flex-wrap ">
         {filteredRestro?.map((restaurant) => {
-          return (
-            <Link
-              key={restaurant?.info?.id}
-              to={"/restaurants/" + restaurant?.info?.id}
-            >
-              <Restcard {...restaurant?.info} />
-            </Link>
-          );
+          {
+            /* <Link
+            key={restaurant?.info?.id}
+            to={"/restaurants/" + restaurant?.info.id}
+          ></Link>; */
+          }
+          return <Restcard {...restaurant?.info} key={restaurant?.info?.id} />;
         })}
       </div>
     </div>

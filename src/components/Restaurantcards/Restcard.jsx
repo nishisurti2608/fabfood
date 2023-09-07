@@ -21,9 +21,7 @@ const Restcard = ({ name, cuisines, cloudinaryImageId, avgRating }) => {
                 {avgRating}
               </p>
             </div>
-            <p className="text-[#7C7C80] font-[15px] resize-none">
-              {cuisines.join(",")}
-            </p>
+            <p className="text-[#7C7C80] font-[15px] resize-none">{cuisines}</p>
           </div>
         </div>
       </div>

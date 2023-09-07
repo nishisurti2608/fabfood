@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Outlet />{" "}
+      <Outlet />
       {/** this outlet will be filled according to the children path */}
     </div>
   );
