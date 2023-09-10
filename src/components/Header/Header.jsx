@@ -3,12 +3,13 @@ import logo from "../../../assets/images/logo.png";
 import { CgMenuHotdog } from "react-icons/cg";
 import { GiKnifeFork } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../../Utils/useOnlineStatus";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   const [btnName, setbtnName] = useState("Login");
-
+  const onlineStatus = useOnlineStatus();
   return (
     <div className="w-full h-[100px] z-10 bg-zinc-50 fixed drop-shadow-lg">
       <div className="px-2 flex justify-between items-center w-full h-full">
@@ -17,6 +18,7 @@ const Header = () => {
             <img src={logo} alt="logo" />
           </div>
           <ul className="hidden md:flex justify-between">
+            <li>onlineStatus : {onlineStatus ? "🟢" : "🔴"}</li>
             <li>
               <Link to="/">Home</Link>
             </li>

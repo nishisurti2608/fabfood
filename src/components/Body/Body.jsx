@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Restcard from "../Restaurantcards/Restcard";
 import Shimmer from "../../Shimmer/Shimmer";
+import useOnlineStatus from "../../Utils/useOnlineStatus";
 
 const Body = () => {
   const [filteredRestro, setfilteredRestro] = useState([]);
@@ -60,6 +61,15 @@ const Body = () => {
     });
     setfilteredRestro(filterData);
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return (
+      <h1 className="pt-[120px] font-semibold">
+        Ooops!!! It seems no internet connection
+      </h1>
+    );
 
   //Body Component
 

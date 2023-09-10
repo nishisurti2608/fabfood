@@ -13,8 +13,9 @@ const RestraurantMenu = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId + "&catalog_qa=undefined");
+    const data = await fetch(MENU_API + resId);
     const json = await data.json();
+    console.log(json);
 
     setResinfo(json.data);
   };
@@ -25,8 +26,7 @@ const RestraurantMenu = () => {
     resInfo?.cards[0]?.card?.card?.info;
 
   const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
-      ?.card;
+    resInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
   return (
     <div className="menu pt-60">
