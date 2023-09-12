@@ -18,6 +18,9 @@ const Header = () => {
             <img src={logo} alt="logo" />
           </div>
           <ul className="hidden md:flex justify-between">
+            <li className="border-b-2 border-zinc-300 w-full">
+              <Link to="/grocery">Grocery</Link>
+            </li>
             <li>onlineStatus : {onlineStatus ? "🟢" : "🔴"}</li>
             <li>
               <Link to="/">Home</Link>
@@ -49,6 +52,9 @@ const Header = () => {
       </div>
 
       <ul className={!nav ? "hidden" : "absolute w-full   bg-zinc-50 px-8 "}>
+        <li className="border-b-2 border-zinc-300 w-full">
+          <Link to="/grocery">Grocery</Link>
+        </li>
         <li className="border-b-2 border-zinc-300 w-full">
           <Link to="/">Home</Link>
         </li>
